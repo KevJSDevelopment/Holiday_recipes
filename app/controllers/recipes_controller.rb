@@ -8,4 +8,23 @@ class RecipesController < ApplicationController
         @recipe = Recipe.find(params[:id])
     end
 
+    def new
+        @recipe = Recipe.new
+    end
+
+    def create
+        #@recipe = params[recipe][name]
+    end
+
+    def edit
+
+    end
+
+    def update
+
+    end
+
+    def destroy
+
+    end
 end

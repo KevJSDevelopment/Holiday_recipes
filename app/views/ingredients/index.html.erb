@@ -1,0 +1,18 @@
+<h1> All Ingredients </h1>
+
+<ul>
+  <% @ingredients.each do |ingredient| %>
+  <br>
+    <li> <%= link_to ingredient.name, ingredient_path(ingredient) %> </li>
+  <%end%>
+</ul>
+
+<br><br><br>
+
+<form method="get" action="/recipes" class="button_to">
+<input value="Go To Recipes" type="submit" />
+</form>
+
+<form method="get" action="/holidays" class="button_to">
+    <input value="Go To Holidays" type="submit" />
+</form>

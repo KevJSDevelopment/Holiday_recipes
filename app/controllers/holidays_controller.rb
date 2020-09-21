@@ -8,4 +8,8 @@ class HolidaysController < ApplicationController
         @holiday = Holiday.find(params[:id])
     end
 
+    def homepage
+        render "homepage"
+    end
+
 end

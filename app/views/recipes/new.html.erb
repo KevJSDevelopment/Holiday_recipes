@@ -1,0 +1,9 @@
+<h1> New Recipe </h1>
+
+<%= form_for @recipe do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :holiday_id, "Holiday" %>
+    <%= f.select :holiday_id, Holiday.all.map {|holiday| holiday.name} %>
+    <%= f.submit %>
+  <%end%>

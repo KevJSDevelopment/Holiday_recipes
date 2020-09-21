@@ -22,6 +22,8 @@ Holiday.create(name: "Cinco de mayo")
 holidays = Holiday.all
 (20).times do 
     recipe = Recipe.create(name: Faker::Food.unique.dish, holiday_id: holidays.sample.id)
-    ingredient = Ingredient.create(name: Faker::Food.ingredient)
-    RecipeIngredient.create(recipe_id: recipe.id, ingredient_id: ingredient.id)
+    ingredient1 = Ingredient.create(name: Faker::Food.ingredient)
+    ingredient2 = Ingredient.create(name: Faker::Food.ingredient)
+    RecipeIngredient.create(recipe_id: recipe.id, ingredient_id: ingredient1.id)
+    RecipeIngredient.create(recipe_id: recipe.id, ingredient_id: ingredient2.id)
 end

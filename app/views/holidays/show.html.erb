@@ -1,7 +1,9 @@
-<h1> <%= @holiday.name %> </h1>
+<h1> <%= @holiday.name %> Recipes</h1>
 
 <ul>
     <% @holiday.recipes.each do |recipe| %>
         <li> <%= link_to recipe.name, recipe_path(recipe) %> </li>
     <%end%>
 </ul>
+<br><br><br><br><br><br><br><br><br>
+<%= link_to "back", holidays_path%>
