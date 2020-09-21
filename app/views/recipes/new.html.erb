@@ -3,7 +3,9 @@
 <%= form_for @recipe do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
+    <br>
     <%= f.label :holiday_id, "Holiday" %>
-    <%= f.select :holiday_id, Holiday.all.map {|holiday| holiday.name} %>
+    <%= f.select :holiday_id, Holiday.all.collect {|holiday| [holiday.name, holiday.id]} %>
+    <br>
     <%= f.submit %>
-  <%end%>
+<%end%>
