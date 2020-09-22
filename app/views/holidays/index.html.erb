@@ -9,14 +9,11 @@
 
 <br><br><br>
 
-<form method="get" action="/recipes" class="button_to">
-<input value="Go To Recipes" type="submit" />
-</form>
+<%= button_to('Go To Ingredients', ingredients_path,
+        method: "get")  %>
 
-<form method="get" action="/ingredients" class="button_to">
-    <input value="Go To Ingredients" type="submit" />
-</form>
+<%= button_to('Go To Recipes', recipes_path,
+        method: "get")  %>
 
-<form method="get" action="/" class="button_to">
-    <input value="Go To Homepage" type="submit" />
-</form>
+<%= button_to('Go To Homepage', homepage_path,
+        method: "get")  %>

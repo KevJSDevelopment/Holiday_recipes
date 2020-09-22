@@ -1,6 +1,10 @@
-<h1> <%= @recipe.name %><h2>(<%= @recipe.holiday.name%>)</h2></h1>
+<h1> <%= @recipe.name %></h1>
+<h2> Holiday: <%= @recipe.holiday.name%> </h2>
 
+<br><br>
+<h3> ingredients </h3>
 <ul>
+
     <% @recipe.ingredients.each do |ingredient|%>
         <br>
         <li> <%= link_to ingredient.name, ingredient_path(ingredient) %> </li>
@@ -8,3 +12,10 @@
 </ul>
 <br>
 <%= link_to "All Recipes", recipes_path%>
+
+
+<%= button_to('Edit Recipe', edit_recipe_path(@recipe.id),
+        method: "get")  %>
+
+<%= button_to('Delete Recipe', recipe_path(@recipe.id),
+        method: "delete")  %>

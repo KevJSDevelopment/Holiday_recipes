@@ -34,7 +34,7 @@ class RecipesController < ApplicationController
     def destroy
         recipe = Recipe.find(params[:id])
         recipe.destroy
-        #make sure to create delete button on app
+        redirect_to recipes_path
     end
 
 end

@@ -9,10 +9,8 @@
 
 <br><br><br>
 
-<form method="get" action="/recipes" class="button_to">
-<input value="Go To Recipes" type="submit" />
-</form>
+<%= button_to('Go To Recipes', recipes_path,
+        method: "get")  %>
 
-<form method="get" action="/holidays" class="button_to">
-    <input value="Go To Holidays" type="submit" />
-</form>
+<%= button_to('Go To Holidays', holidays_path,
+        method: "get")  %>

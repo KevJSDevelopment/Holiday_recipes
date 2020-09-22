@@ -1,10 +1,20 @@
-<h1> <%= @ingredient.name %> </h1>
+<h1> Ingredient: <%= @ingredient.name %> </h1>
+<br><br><br><br>
+<p> <%= @ingredient.name %> </p>
 
-<ul>
-  <% @ingredient.recipes.each do |recipe| %>
-  <br> <h3>Recipe</h3>
-    <li><%= link_to recipe.name, recipe_path(recipe) %></li>
-  <% end %> 
-</ul>
 <br>
-<%= link_to "All Ingredients", ingredients_path%>
+<br>
+<br>
+
+<br>
+
+
+<br>
+<%= button_to('Edit Ingredient', edit_ingredient_path(@ingredient.id),
+        method: "get")  %>
+<br>
+<%= button_to('Delete Ingredient', ingredient_path(@ingredient.id),
+        method: "delete")  %>
+<br>
+<%= button_to('All Ingredients', ingredients_path,
+        method: "get")  %>
