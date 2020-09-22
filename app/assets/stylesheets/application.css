@@ -19,7 +19,7 @@
 
  .header {
     background-color: rgb(167, 167, 167);
-    text-align: space-between;
+    text-align: center;
     padding: 10px;
     margin-bottom: 20px;
 }
@@ -29,4 +29,26 @@
   text-align: space-between;
   padding: 10px;
   margin-bottom: 20px;
+}
+
+/* div {
+  display: inline-flex;
+} */
+ .btn_group {
+   /* display: grid; */
+   display: inline-flex;
+} 
+
+.btn {
+  margin: 10px 24px;
+}
+
+ul {
+  margin-left: 40px;
+}
+
+li {
+  width: 33%;
+  float: left;
+  list-style: none;
 }

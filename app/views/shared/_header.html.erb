@@ -1,6 +1,19 @@
 <div class= "header">
-  <div> 
-      <%= button_to('Go To Ingredients', ingredients_path, method: "get")  %>
+  <div class= "btn_group"> 
+      <% if controller.controller_name == "holidays" && controller.action_name != "homepage" %>
+        <%= button_to('Go To Ingredients', ingredients_path, method: "get", class: "btn") %>
+        <%= button_to('Go To Recipes', recipes_path, method: "get", class: "btn") %>
+      <% elsif controller.controller_name == "recipes"%>
+        <%= button_to('Go To Ingredients', ingredients_path, method: "get", class: "btn") %>
+        <%= button_to('Go To Holidays', holidays_path, method: "get", class: "btn") %>
+      <% elsif controller.controller_name == "ingredients"%>
+        <%= button_to('Go To Recipes', recipes_path, method: "get", class: "btn") %>
+        <%= button_to('Go To Holidays', holidays_path, method: "get", class: "btn") %>
+      <% else %>
+        <%= button_to('Go To Ingredients', ingredients_path, method: "get", class: "btn") %>
+        <%= button_to('Go To Recipes', recipes_path, method: "get", class: "btn") %>
+        <%= button_to('Go To Holidays', holidays_path, method: "get", class: "btn") %>
+      <% end %>
   </div>
 </div>
 
